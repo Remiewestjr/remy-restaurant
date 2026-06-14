@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panneau Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body onload="verifierAccesAdmin()">
+  <header>
+    <h1>👨‍🍳 Espace Administrateur</h1>
+  </header>
+
+  <main class="admin-panel">
+    <h2>Commandes reçues</h2>
+    <table class="commandes">
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Commande</th>
+          <th>Total</th>
+          <th>Table</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="liste-commandes">
+        <tr>
+          <td>Jean Dupont</td>
+          <td>Pizza Royale, Coca-Cola</td>
+          <td>20$</td>
+          <td>5</td>
+          <td><button class="btn-valider">✅ Servi</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="logout" onclick="deconnexionAdmin()">Déconnexion</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 REMIE Restaurant | Zone confidentielle</p>
+  </footer>
+</body>
+</html>

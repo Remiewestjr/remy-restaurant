@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu – REMIE Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+    <h1>REMIE RESTAURANT – Menu Complet 🍽</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a class="active" href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+   <div class="main-sections-container">
+    <div class="section-banner-card bar-zone" onclick="filtrerUnivers('bar')">
+        <div class="banner-overlay">
+            <h2>BAR</h2>
+            <p>Boissons, Vins, Bières & Cocktails</p>
+        </div>
+    </div>
+
+    <div class="section-banner-card restaurant-zone" onclick="filtrerUnivers('restaurant')">
+        <div class="banner-overlay">
+            <h2>RESTAURANT</h2>
+            <p>Nos grillades, pizzas, burgers et plats locaux</p>
+        </div>
+    </div>
+</div>
+
+<div class="sub-categories-container" id="sub-categories" style="display: none;">
+    <div class="sub-group" id="group-bar">
+        <div class="categorie-card" onclick="ouvrirCategorie('boissons')">🥤 Jus & Softs</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('vins')">🍷 Vins & Bières</div>
+    </div>
+
+    <div class="sub-group" id="group-restaurant">
+        <div class="categorie-card" onclick="ouvrirCategorie('viandes')">🥩 Viandes</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('poissons')">🐟 Poissons</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('pizzas')">🍕 Pizzas</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('burgers')">🍔 Burgers</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('sandwichs')">🥪 Sandwichs</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('foufou-légumes')">🥬 Plats Locaux</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('riz-pates')">🍝 Féculents</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('desserts')">🍰 Desserts</div>
+        <div class="categorie-card" onclick="ouvrirCategorie('glaces')">🍨 Glaces</div>
+    </div>
+</div>
+
+<!-- **************************************** -->
+<!-- **************   BOISSONS   ************** -->
+<!-- **************************************** -->
+
+<section id="boissons" class="menu-section">
+    <h2>🥤 Boissons - Soft, Eaux & Jus</h2>
+    <div class="menu-grid">
+
+        <div class="item-compact" onclick="ajouterAuPanier('Eau minérale', 2)">
+            <img src="img/OIP - 2025-11-14T132925.274.webp">
+    <div class="item-details">
+        <h3>Eau minérale</h3>
+        <p class="item-price">2$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+        <div class="item-compact" onclick="ajouterAuPanier('Eau gazeuse', 3)">
+            <img src="img/télécharger (8).webp" alt="Eau gazeuse">
+            <div class="item-details">
+                <h3>Eau gazeuse</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Jus d\'orange', 4)">
+            <img src="img/OIP (30).webp" alt="Jus d'orange">
+            <div class="item-details">
+                <h3>Jus d'orange</h3>
+                <p class="item-price">4$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Jus d\'ananas', 4)">
+            <img src="img/OIP (32).webp" alt="Jus d'ananas">
+            <div class="item-details">
+                <h3>Jus d'ananas</h3>
+                <p class="item-price">4$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Jus cocktail', 5)">
+            <img src="img/OIP (27).webp" alt="Jus cocktail">
+            <div class="item-details">
+                <h3>Jus cocktail</h3>
+                <p class="item-price">5$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Coca-Cola', 3)">
+            <img src="img/th (15).webp" alt="Coca-Cola">
+            <div class="item-details">
+                <h3>Coca-Cola</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Fanta', 3)">
+            <img src="img/télécharger (41).webp" alt="Fanta">
+            <div class="item-details">
+                <h3>Fanta</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Sprite', 3)">
+            <img src="img/télécharger (37).webp" alt="Sprite">
+            <div class="item-details">
+                <h3>Sprite</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Ice Tea', 3)">
+            <img src="img/OIP (24).webp" alt="Ice Tea">
+            <div class="item-details">
+                <h3>Ice Tea</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Thé chaud', 2)">
+            <img src="img/OIP (25).webp" alt="Thé chaud">
+            <div class="item-details">
+                <h3>Thé chaud</h3>
+                <p class="item-price">2$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+<!-- **************************************** -->
+<!-- ***************  VINS ET BIÈRES ******** -->
+<!-- **************************************** -->
+
+<section id="vins" class="menu-section">
+    <h2>🍷 Vins & Bière</h2>
+    <div class="menu-grid">
+
+        <div class="item-compact" onclick="ajouterAuPanier('Vin rouge', 15)">
+            <img src="img/OIP (11).webp" alt="Vin rouge">
+            <div class="item-details">
+                <h3>Vin rouge</h3>
+                <p class="item-price">15$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Vin blanc', 14)">
+            <img src="img/OIP (13).webp" alt="Vin blanc">
+            <div class="item-details">
+                <h3>Vin rosé</h3>
+                <p class="item-price">14$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Vin rosé', 14)">
+            <img src="img/th (15).webp" alt="Vin rosé">
+            <div class="item-details">
+                <h3>Vin tequila</h3>
+                <p class="item-price">14$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Champagne', 35)">
+            <img src="img/OIP - 2025-11-14T133535.544.webp" alt="Champagne">
+            <div class="item-details">
+                <h3>Champagne</h3>
+                <p class="item-price">35$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Bière blonde', 4)">
+            <img src="img/OIP (19).webp" alt="Bière blonde">
+            <div class="item-details">
+                <h3>Bière doppel</h3>
+                <p class="item-price">4$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Bière brune', 5)">
+            <img src="img/OIP (15).webp" alt="Bière brune">
+            <div class="item-details">
+                <h3>Bière tembo</h3>
+                <p class="item-price">5$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Bière IPA', 6)">
+            <img src="img/télécharger (4).webp" alt="Bière IPA">
+            <div class="item-details">
+                <h3>IPA</h3>
+                <p class="item-price">6$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Bière locale', 3)">
+            <img src="img/télécharger (5).webp" alt="Bière locale">
+            <div class="item-details">
+                <h3>Bière beaufort</h3>
+                <p class="item-price">3$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Cidre', 4)">
+            <img src="img/télécharger (6).webp" alt="Cidre">
+            <div class="item-details">
+                <h3>simba</h3>
+                <p class="item-price">4$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Mousseux', 18)">
+            <img src="img/OIP (16).webp" alt="Mousseux">
+            <div class="item-details">
+                <h3>beaufort</h3>
+                <p class="item-price">18$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- **************************************** -->
+<!-- ***************   VIANDES   ************* -->
+<!-- **************************************** -->
+
+<section id="viandes" class="menu-section">
+    <h2>🥩 Viandes</h2>
+    <div class="menu-grid"></div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Boeuf grillé', 20)">
+            <img src="img/OIP (36).webp" alt="Boeuf grillé">
+            <div class="item-details">
+                <h3>Boeuf grillé</h3>
+                <p class="item-price">20$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Côte de boeuf', 25)">
+            <img src="img/OIP (37).webp" alt="Côte de boeuf">
+            <div class="item-details">
+                <h3>Côte de boeuf</h3>
+                <p class="item-price">25$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Steak kobe', 40)">
+            <img src="img/OIP (39).webp" alt="Steak Kobe">
+            <div class="item-details">
+                <h3>Steak Kobe</h3>
+                <p class="item-price">40$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Porc rôti', 18)">
+            <img src="img/OIP (46).webp" alt="Porc rôti">
+            <div class="item-details">
+                <h3>Porc rôti</h3>
+                <p class="item-price">18$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Porc fumé', 19)">
+            <img src="img/OIP (47).webp" alt="Porc fumé">
+            <div class="item-details">
+                <h3>Porc fumé</h3>
+                <p class="item-price">19$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Poulet braisé', 14)">
+            <img src="img/télécharger (10).webp" alt="Poulet braisé">
+            <div class="item-details">
+                <h3>Poulet braisé</h3>
+                <p class="item-price">14$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Poulet croustillant', 13)">
+            <img src="img/télécharger (45).webp" alt="Poulet croustillant">
+            <div class="item-details">
+                <h3>Poulet croustillant</h3>
+                <p class="item-price">13$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Travers de porc', 20)">
+            <img src="img/télécharger (42).webp" alt="Travers de porc">
+            <div class="item-details">
+                <h3>Travers de porc</h3>
+                <p class="item-price">20$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Grillades mixtes', 25)">
+            <img src="img/télécharger (44).webp" alt="Grillades mixtes">
+            <div class="item-details">
+                <h3>Grillades mixtes</h3>
+                <p class="item-price">25$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Brochettes de boeuf', 16)">
+            <img src="img/télécharger (43).webp" alt="Brochettes de boeuf">
+            <div class="item-details">
+                <h3>Brochettes de boeuf</h3>
+                <p class="item-price">16$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- **************************************** -->
+<!-- ***************   POISSON   ************* -->
+<!-- **************************************** -->
+
+<section id="poissons" class="menu-section">
+    <h2>🐟 Poissons</h2>
+    <div class="menu-grid"></div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Tilapia grillé', 15)">
+            <img src="img/OIP - 2025-11-14T140119.636.webp" alt="Tilapia grillé">
+            <div class="item-details">
+                <h3>Tilapia grillé</h3>
+                <p class="item-price">15$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Saumon grillé', 22)">
+            <img src="img/OIP (51).webp" alt="Saumon grillé">
+            <div class="item-details">
+                <h3>Saumon grillé</h3>
+                <p class="item-price">22$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Poisson braisé', 18)">
+            <img src="img/OIP (52).webp" alt="Poisson braisé">
+            <div class="item-details">
+                <h3>Poisson braisé</h3>
+                <p class="item-price">18$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Sardines grillées', 12)">
+            <img src="img/OIP (53).webp" alt="Sardines grillées">
+            <div class="item-details">
+                <h3>Sardines grillées</h3>
+                <p class="item-price">12$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+        <div class="item-compact" onclick="ajouterAuPanier('Bar de mer', 24)">
+            <img src="img/OIP (54).webp" alt="Bar de mer">
+            <div class="item-details">
+                <h3>Bar de mer</h3>
+                <p class="item-price">24$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- ************************************************ -->
+<!-- *************** AUTRES CATÉGORIES *************** -->
+<!-- ************************************************ -->
+
+<!-- Pizza -->
+<section id="pizzas" class="menu-section">
+    <h2>🍕 Pizzas</h2>
+    <div class="menu-grid"></div>
+        <!-- 10 pizzas -->
+        <div class="item-compact" onclick="ajouterAuPanier('Pizza Margherita', 12)">
+            <img src="img/télécharger (13).webp" alt="Pizza Margherita">
+            <div class="item-details">
+                <h3>Margherita</h3>
+                <p class="item-price">12$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+        <div class="item-compact" onclick="ajouterAuPanier('Pizza Fromage', 14)">
+            <img src="img/télécharger (14).webp" alt="Pizza Fromage">
+            <div class="item-details">
+                <h3>4 Fromages</h3>
+                <p class="item-price">14$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+        <div class="item-compact" onclick="ajouterAuPanier('Pizza Reine', 13)">
+            <img src="img/OIP (58).webp" alt="Pizza Reine">
+            <div class="item-details">
+                <h3>Reine</h3>
+                <p class="item-price">13$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+<div class="item-compact" onclick="ajouterAuPanier('Pizza Pepperoni', 15)">
+<img src="img/OIP (57).webp" alt="Pizza Pepperoni"><h3>Pepperoni</h3><p>15$</p><button class="select-btn">Choisir</button>
+</div>
+<div class="item-compact" onclick="ajouterAuPanier('Pizza Royale', 17)">
+<img src="img/télécharger (40).webp" alt="Pizza Royale"><h3>Royale</h3><p>17$</p><button class="select-btn">Choisir</button>
+</div>
+</div>
+</section>
+
+<!-- Burgers -->
+<section id="burgers" class="menu-section">
+    <h2>🍔 Burgers</h2>
+    <div class="menu-grid">
+        <div class="item-compact" onclick="ajouterAuPanier('Burger Royal', 12)">
+            <img src="img/OIP (60).webp" alt="Burger Royal">
+            <div class="item-details">
+                <h3>Royal</h3>
+                <p class="item-price">12$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+        <div class="item-compact" onclick="ajouterAuPanier('Double Cheese', 14)">
+            <img src="img/OIP (72).webp" alt="Double Cheese">
+            <div class="item-details">
+                <h3>Double Cheese</h3>
+                <p class="item-price">14$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+        <div class="item-compact" onclick="ajouterAuPanier('Chicken Burger', 13)">
+            <img src="img/télécharger (45).webp" alt="Chicken Burger">
+            <div class="item-details">
+                <h3>Chicken</h3>
+                <p class="item-price">13$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+    </div>
+</section>
+
+<!-- Sandwich -->
+<section id="sandwichs" class="menu-section">
+<h2>🥪 Sandwichs</h2>
+<div class="menu-grid">
+
+<div class="item-compact" onclick="ajouterAuPanier('Sandwich thon', 8)">
+    <img src="img/télécharger (28).webp" alt="Sandwich thon">
+    <div class="item-details">
+        <h3>Sandwich thon</h3>
+        <p class="item-price">8$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+
+<div class="item-compact" onclick="ajouterAuPanier('Sandwich poulet', 9)">
+    <img src="img/télécharger (26).webp" alt="Sandwich poulet">
+    <div class="item-details">
+        <h3>Sandwich poulet</h3>
+        <p class="item-price">9$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+
+</div>
+</section>
+
+<!-- Desserts -->
+<section id="desserts" class="menu-section">
+    <h2>🍰 Gâteaux & Desserts</h2>
+    <div class="menu-grid">
+        <div class="item-compact" onclick="ajouterAuPanier('Gâteau chocolat', 6)">
+            <img src="img/télécharger (46).webp" alt="Gâteau chocolat">
+            <div class="item-details">
+                <h3>Chocolat</h3>
+                <p class="item-price">6$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+<div class="item-compact" onclick="ajouterAuPanier('Gâteau vanille', 5)">
+<img src="img/OIP - 2025-11-14T141730.783.webp" alt="Gâteau vanille">
+            <div class="item-details">
+                <h3>Vanille</h3>
+                <p class="item-price">5$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+</div>
+<div class="item-compact" onclick="ajouterAuPanier('Tiramisu', 7)">
+<img src="img/OIP - 2025-11-14T141826.284.webp" alt="Tiramisu">
+            <div class="item-details">
+                <h3>Tiramisu</h3>
+                <p class="item-price">7$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+</div>
+</div>
+</section>
+
+<section id ="glaces" class="menu-section">
+    <h2>🍨 Glaces</h2>
+    <div class="menu-grid">
+        <div class="item-compact" onclick="ajouterAuPanier('Glace vanille', 5)">
+            <img src="img/OIP - 2025-11-14T141923.639.webp" alt="Glace vanille">
+            <div class="item-details">
+                <h3>Vanille</h3>
+                <p class="item-price">5$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+<div class="item-compact" onclick="ajouterAuPanier('Glace chocolat', 5)">
+    <img src="img/télécharger (47).webp" alt="Glace chocolat">
+    <div class="item-details">
+        <h3>Chocolat</h3>
+        <p class="item-price">5$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+<div class="item-compact" onclick="ajouterAuPanier('Glace fraise', 5)">
+    <img src="img/OIP - 2025-11-14T142122.442.webp" alt="Glace fraise">
+    <div class="item-details">
+        <h3>Fraise</h3>
+        <p class="item-price">5$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+</div>
+</section>
+
+<!-- Foufou et légumes -->
+<section id="foufou-légumes" class="menu-section">
+    <h2>🥬 Légumes & Foufou</h2>
+    <div class="menu-grid">
+
+<div class="item-compact" onclick="ajouterAuPanier('Foufou viande', 10)">
+<img src="img/télécharger (36).webp" alt="Foufou viande">
+            <div class="item-details">
+                <h3>Foufou viande</h3>
+                <p class="item-price">10$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+</div>
+
+<div class="item-compact" onclick="ajouterAuPanier('Foufou poisson', 11)">
+<img src="img/télécharger (35).webp" alt="Foufou poisson">
+            <div class="item-details">
+                <h3>Foufou poisson</h3>
+                <p class="item-price">11$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+</div>
+
+<div class="item-compact" onclick="ajouterAuPanier('Légumes sautés', 7)">
+<img src="img/OIP (74).webp" alt="Légumes sautés">
+            <div class="item-details">
+                <h3>Légumes sautés</h3>
+                <p class="item-price">7$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+</div>
+
+</div>
+</section>
+
+<!-- Riz - Pâtes -->
+<section id="riz-pates" class="menu-section">
+    <h2>🍝 Riz, Pâtes & Spaghetti</h2>
+    <div class="menu-grid">
+        <div class="item-compact" onclick="ajouterAuPanier('Riz blanc', 6)">
+            <img src="img/OIP (95).webp" alt="Riz blanc">
+            <div class="item-details">
+                <h3>Riz blanc</h3>
+                <p class="item-price">6$</p>
+            </div>
+            <button class="select-btn">Choisir</button>
+        </div>
+
+<div class="item-compact" onclick="ajouterAuPanier('Riz pilaf', 8)">
+    <img src="img/OIP (93).webp" alt="Riz pilaf">
+    <div class="item-details">
+        <h3>Pâtes</h3>
+        <p class="item-price">8$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+
+<div class="item-compact" onclick="ajouterAuPanier('Spaghetti bolognaise', 10)">
+    <img src="img/OIP (100).webp" alt="Spaghetti bolognaise">
+    <div class="item-details">
+        <h3>Spaghetti bolognaise</h3>
+        <p class="item-price">10$</p>
+    </div>
+    <button class="select-btn">Choisir</button>
+</div>
+
+</div>
+</section>
+
+<!-- **************************************** -->
+<!-- *************** TOTAL COMMANDE ********** -->
+<!-- **************************************** -->
+<section class="total">
+    <h2>Total de la commande : <span id="total">0 </span>$</h2>
+    <div class="order-meta">
+      <label for="clientNom">Votre nom :</label>
+      <input type="text" id="clientNom" placeholder=" Enter" />
+    </div>
+
+<div class="boutons-action">
+
+    <button class="btn" onclick="confirmerCommande()">
+        Commander maintenant
+    </button>
+
+    <button class="btn-annuler" onclick="annulerCommande()">
+        Annuler la commande
+    </button>
+
+</div>
+
+<br><br>
+
+<div class="table-client">
+    <label></strong> le numéro de votre table :</strong></label>
+
+    <select id="numeroTable">
+        <option value="">Choisir une table</option>
+
+        <option value="1">Table 1</option>
+        <option value="2">Table 2</option>
+        <option value="3">Table 3</option>
+        <option value="4">Table 4</option>
+        <option value="5">Table 5</option>
+        <option value="6">Table 6</option>
+        <option value="7">Table 7</option>
+        <option value="8">Table 8</option>
+        <option value="9">Table 9</option>
+        <option value="10">Table 10</option>
+        <option value="11">Table 11</option>
+        <option value="12">Table 12</option>
+        <option value="13">Table 13</option>
+        <option value="14">Table 14</option>
+        <option value="15">Table 15</option>
+        <option value="16">Table 16</option>
+        <option value="17">Table 17</option>
+        <option value="18">Table 18</option>
+        <option value="19">Table 19</option>
+        <option value="20">Table 20</option>
+    </select>
+</div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 REMIE RESTAURANT — Menu digital premium</p>
+</footer>
+
+</body>
+</html>

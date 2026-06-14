@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REMIE Restaurant | Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenue chez <span class="highlight">REMIE Restaurant</span> 🍽</h1>
+    <h2>Commandez vos repas à distance, sans menu papier</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="intro">
+      <h2>Découvrez notre menu digital</h2>
+      <p>Choisissez, commandez, savourez — tout se fait ici 💻🍕</p>
+      <a href="menu.html" class="btn">Voir le menu complet 🍔</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 REMIE Restaurant | Tous droits réservés</p>
+  </footer>
+
+  <!-- Code secret admin -->
+  <script>
+    const codeSecret = "monSuperCode2025";
+    document.addEventListener("keydown", (e) => {
+      if (e.ctrlKey && e.altKey && e.key === "a") {
+        const code = prompt("Entrez le code secret administrateur :");
+        if (code === codeSecret) {
+          sessionStorage.setItem("adminConnecte", "oui");
+          window.location.href = "admin.php";
+        } else {
+          alert("Code incorrect !");
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

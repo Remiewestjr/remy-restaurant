@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REMIE Restaurant | Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+   <header>
+    <h1>Contactez-nous 📬</h1>
+    <h2>Et commandez vos repas à distance, sans menu papier</h2>
+  </header>
+
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+     
+  <main>
+    <form class="contact-form">
+      <h2>Commande à domicile</h2>
+      <label>Nom complet :</label>
+      <input type="text" placeholder="Votre nom" required>
+
+      <label>Email :</label>
+      <input type="email" placeholder="Votre email" required>
+
+      <label>Adresse :</label>
+      <input type="text" placeholder="Votre adresse complète" required>
+
+      <label>Message ou commande :</label>
+      <textarea placeholder="Vos détails de commande..." required></textarea>
+
+      <button type="submit" class="btn">Envoyer la commande</button>
+    </form>
+  </main>
+
+  <main>
+    <section class="contact-form">
+    <h2>Paiement de la commande</h2>
+
+    <label style="margin-bottom: 15px; display: block; text-align: center;">Choisissez votre moyen de paiement :</label>
+
+    <div class="payment-methods-grid">
+        <label class="payment-radio-card">
+            <input type="radio" name="moyenPaiement" value="PayPal" checked>
+            <div class="card-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                <span>PayPal</span>
+            </div>
+        </label>
+
+  
+<label class="payment-radio-card">
+    <input type="radio" name="moyenPaiement" value="M-Pesa">
+    <div class="card-content">
+        <img src="img/reseau/pj/th.webp" alt="M-Pesa" class="logo-payment">
+        <span>M-Pesa</span>
+    </div>
+</label>
+
+<label class="payment-radio-card">
+    <input type="radio" name="moyenPaiement" value="Airtel Money">
+    <div class="card-content">
+        <img src="img/reseau/1620644253684-og_image.jpg" alt="Airtel Money" class="logo-payment">
+        <span>Airtel Money</span>
+    </div>
+</label>
+      <label class="payment-radio-card">
+            <input type="radio" name="moyenPaiement" value="Orange Money">
+            <div class="card-content">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Orange_logo.svg" alt="Orange Money">
+                <span>Orange Money</span>
+            </div>
+        </label>
+    </div>
+
+    <div class="payment-info-box">
+        <p>Numéro de transfert marchand :</p>
+        <strong>+243 976 811 174</strong>
+    </div>
+
+    <label for="referencePaiement">Référence de la transaction (ID) :</label>
+    <input type="text" id="referencePaiement" placeholder="Ex: MP24058963" required>
+
+    <button class="btn" style="width: 100%; margin-top: 15px;">Confirmer le paiement</button>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 REMIE Restaurant | Tous droits réservés</p>
+  </footer>
+
+  <!-- Code secret admin -->
+  <script>
+    const codeSecret = "monSuperCode2025";
+    document.addEventListener("keydown", (e) => {
+      if (e.ctrlKey && e.altKey && e.key === "a") {
+        const code = prompt("Entrez le code secret administrateur :");
+        if (code === codeSecret) {
+          sessionStorage.setItem("adminConnecte", "oui");
+          window.location.href = "admin.php";
+        } else {
+          alert("Code incorrect !");
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
+
